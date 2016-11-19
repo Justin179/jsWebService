@@ -65,13 +65,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="StudentService.asmx" />
     <Content Include="Web.config" />
-    <Content Include="WebServicesDemo.asmx" />
+    <Content Include="WebForm_localDB.aspx" />
+    <Content Include="WebForm_ws_db.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebServicesDemo.asmx.cs">
-      <DependentUpon>WebServicesDemo.asmx</DependentUpon>
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentService.asmx.cs">
+      <DependentUpon>StudentService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebForm_localDB.aspx.cs">
+      <DependentUpon>WebForm_localDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_localDB.aspx.designer.cs">
+      <DependentUpon>WebForm_localDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_ws_db.aspx.cs">
+      <DependentUpon>WebForm_ws_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_ws_db.aspx.designer.cs">
+      <DependentUpon>WebForm_ws_db.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
