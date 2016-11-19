@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88C1BAC9-B29F-4A03-8E9C-C869CFDAD4E1}</ProjectGuid>
+    <ProjectGuid>{3D6FC7E2-CF68-4EFD-BCC4-EA60ADC9D498}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DatabaseFirstDemo</RootNamespace>
-    <AssemblyName>DatabaseFirstDemo</AssemblyName>
+    <RootNamespace>CodeFirstDemo</RootNamespace>
+    <AssemblyName>CodeFirstDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,51 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BlogModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BlogModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
+    <Compile Include="Migrations\201611190635270_createPost.cs" />
+    <Compile Include="Migrations\201611190635270_createPost.Designer.cs">
+      <DependentUpon>201611190635270_createPost.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Post.cs">
-      <DependentUpon>BlogModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="BlogModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BlogModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="BlogModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="BlogModel.edmx.diagram">
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-    </None>
-    <None Include="BlogModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogModel.edmx</DependentUpon>
-      <LastGenOutput>BlogModel.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201611190635270_createPost.resx">
+      <DependentUpon>201611190635270_createPost.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
